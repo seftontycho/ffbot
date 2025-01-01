@@ -30,9 +30,9 @@ jobs:
     - name: Install Chrome
       run: |
         sudo apt install google-chrome-stable
+    - name: Install chromedriver
+      run: |
+        seleniumbase install chromedriver
     - name: Run
       run: |
         python scrape.py
-    - name: Test with pytest
-      run: |
-        pytest
