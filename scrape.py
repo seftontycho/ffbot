@@ -10,7 +10,7 @@ with SB(uc=True, test=True, locale_code="fr", headed=False, incognito=True) as s
     sb.uc_gui_click_captcha()
     sb.sleep(2)
     sb.save_screenshot_to_logs()
-    if sb.is_element_present():
+    if sb.is_element_present(SELECTOR):
         print("It worked! Found the element using v1!")
 
 time.sleep(3)
@@ -22,5 +22,5 @@ with SB(uc=True, test=True, locale_code="fr", headed=False) as sb:
     sb.cdp.gui_click_element("#HJup0 > div")
     sb.sleep(2)
     sb.save_screenshot_to_logs()
-    if sb.is_element_present():
+    if sb.is_element_present(SELECTOR):
         print("It worked! Found the element using v2!")
