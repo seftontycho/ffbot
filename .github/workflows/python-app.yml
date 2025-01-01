@@ -33,6 +33,7 @@ jobs:
     - name: Install chromedriver
       run: |
         seleniumbase install chromedriver
+        seleniumbase install uc_driver
     - name: Run
       run: |
         python scrape.py
