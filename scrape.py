@@ -1,7 +1,7 @@
 from seleniumbase import SB
 import time
 
-with SB(uc=True, test=True, locale_code="fr", headed=True, incognito=True) as sb:
+with SB(uc=True, test=True, locale_code="fr", headed=False, incognito=True) as sb:
     url = "https://gitlab.com/users/sign_in"
     sb.activate_cdp_mode(url)
     sb.sleep(1)
@@ -11,7 +11,7 @@ with SB(uc=True, test=True, locale_code="fr", headed=True, incognito=True) as sb
 
 time.sleep(3)
 
-with SB(uc=True, test=True, locale_code="fr", headed=True) as sb:
+with SB(uc=True, test=True, locale_code="fr", headed=False) as sb:
     url = "https://gitlab.com/users/sign_in"
     sb.activate_cdp_mode(url)
     sb.sleep(1)
